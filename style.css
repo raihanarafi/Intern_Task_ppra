@@ -1,0 +1,90 @@
+/* Header Style */
+
+/* --- Global Resets & Fonts --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif; /* Clean font matching the screenshot */
+}
+
+/* --- 1. Top Utility Bar Styling --- */
+.top-bar {
+    background-color: #f8f9fa; /* Light gray background */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 5%;
+    font-size: 14px;
+    border-bottom: 1px solid #e9ecef;
+}
+
+.tender-submission-link {
+    color: #000;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.top-bar-right {
+    display: flex;
+    align-items: center;
+    gap: 15px; /* Spaces out items horizontally */
+}
+
+.contact-info {
+    color: #333;
+}
+
+/* Dark Green Buttons styling */
+.btn-dark-green {
+    background-color: #00524e; /* Dark teal/green from screenshot */
+    color: white;
+    text-decoration: none;
+    padding: 6px 16px;
+    border-radius: 4px;
+    font-weight: bold;
+    font-size: 13px;
+    transition: background 0.2s ease;
+}
+
+.btn-dark-green:hover {
+    background-color: #003b38;
+}
+
+/* --- 2. Main Navigation Header Styling --- */
+.main-header {
+    background-color: #ffffff;
+    padding: 15px 5%;
+}
+
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.ppra-logo {
+    height: 75px; /* Adjust scale based on your preference */
+    width: auto;
+}
+
+.main-nav .nav-links {
+    display: flex;
+    list-style: none;
+    gap: 25px; /* Spaces your menu links evenly */
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #003366; /* Deep corporate blue tone for standard links */
+    font-size: 16px;
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+.nav-links a:hover, 
+.nav-links a.active {
+    color: #00524e; /* Changes to theme green on hover/active */
+}
