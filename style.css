@@ -31,8 +31,20 @@
     gap: 15px; /* Spaces out items horizontally */
 }
 
+/* Align icon and text perfectly center on the same line */
 .contact-info {
+    display: flex;
+    align-items: center;
+    gap: 6px; /* Spacing between the black icon and text */
     color: #333;
+}
+
+/* Size and color control for your new vector icons */
+.contact-icon {
+    width: 16px;
+    height: 16px;
+    color: #000000; /* Forces the outline to be fully black */
+    display: inline-block;
 }
 
 /* Dark Green Buttons styling */
