@@ -1,11 +1,15 @@
-/* Header Style */
-
 /* --- Global Resets & Fonts --- */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, sans-serif; /* Clean font matching the screenshot */
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #ffffff;
+    width: 100%;
+    overflow-x: hidden; /* Prevents awkward horizontal scrolling */
 }
 
 /* --- 1. Top Utility Bar Styling --- */
@@ -14,37 +18,45 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 8px 5%;
-    font-size: 14px;
+    padding: 10px 5%;
+    width: 100%;
     border-bottom: 1px solid #e9ecef;
+}
+
+.top-bar-left {
+    display: flex;
+    align-items: center;
 }
 
 .tender-submission-link {
     color: #000;
     font-weight: bold;
     text-decoration: underline;
+    font-size: 14px;
 }
 
 .top-bar-right {
     display: flex;
     align-items: center;
-    gap: 15px; /* Spaces out items horizontally */
+    gap: 20px; /* Uniform space between contact items and buttons */
+    flex-wrap: wrap; /* Prevents breakdown on small screens */
 }
 
 /* Align icon and text perfectly center on the same line */
 .contact-info {
-    display: flex;
+    display: inline-flex;
     align-items: center;
-    gap: 6px; /* Spacing between the black icon and text */
+    gap: 6px; 
     color: #333;
+    font-size: 14px;
 }
 
-/* Size and color control for your new vector icons */
+/* Size and color control for your vector icons */
 .contact-icon {
     width: 16px;
     height: 16px;
-    color: #000000; /* Forces the outline to be fully black */
-    display: inline-block;
+    color: #000000; 
+    stroke: #000000;
 }
 
 /* Dark Green Buttons styling */
@@ -56,47 +68,56 @@
     border-radius: 4px;
     font-weight: bold;
     font-size: 13px;
-    transition: background 0.2s ease;
-}
-
-.btn-dark-green:hover {
-    background-color: #003b38;
+    display: inline-block;
 }
 
 /* --- 2. Main Navigation Header Styling --- */
 .main-header {
     background-color: #ffffff;
+    width: 100%;
     padding: 15px 5%;
+    border-bottom: 1px solid #f0f0f0;
 }
 
 .navbar-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 1200px;
+    width: 100%;
+    max-width: 1400px;
     margin: 0 auto;
 }
 
+.logo-box {
+    display: flex;
+    align-items: center;
+}
+
 .ppra-logo {
-    height: 75px; /* Adjust scale based on your preference */
+    height: 75px; 
     width: auto;
+    display: block;
+}
+
+.main-nav {
+    display: flex;
+    align-items: center;
 }
 
 .main-nav .nav-links {
     display: flex;
     list-style: none;
-    gap: 25px; /* Spaces your menu links evenly */
+    gap: 25px; 
 }
 
 .nav-links a {
     text-decoration: none;
-    color: #003366; /* Deep corporate blue tone for standard links */
+    color: #333333; /* Dark gray/black look for menu links */
     font-size: 16px;
-    font-weight: 500;
-    transition: color 0.2s ease;
+    font-weight: bold;
 }
 
 .nav-links a:hover, 
 .nav-links a.active {
-    color: #00524e; /* Changes to theme green on hover/active */
+    color: #00524e; /* Highlights to theme green */
 }
