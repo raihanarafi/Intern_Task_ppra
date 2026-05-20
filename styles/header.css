@@ -1,0 +1,280 @@
+/* Header Style */
+
+/* --- Global Resets & Fonts --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+html, body {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    background-color: #ffffff;
+}
+
+/* FIX: Push the content layout down safely.
+   This prevents your page sections from getting swallowed beneath the newly fixed header element.
+*/
+body {
+    padding-top: 145px; 
+}
+
+/* --- New Parent Structural Anchor Layer --- */
+#header-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 3000; /* Raised higher than the mega-menus to maintain complete layout dominance */
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s ease;
+    transform: translateY(0);
+    opacity: 1;
+}
+
+/* --- THE HOOK TARGETED BY YOUR INTERSECTION OBSERVER SCRIPT --- */
+#header-container.header-hidden {
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(-100%); /* Slides the top utility bar and nav links out of view together */
+}
+
+/* --- 1. Top Utility Bar Styling --- */
+.top-bar {
+    background-color: #f8f9fa;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 6%;
+    font-size: 14px;
+    border-bottom: 1px solid #e9ecef;
+}
+
+.tender-submission-link {
+    color: #000;
+    font-weight: normal;
+    text-decoration: underline;
+}
+
+.top-bar-right {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.contact-info {
+    color: #333;
+}
+
+/* Dark Green Buttons styling */
+.btn-dark-green {
+    background-color: #00524e;
+    color: white;
+    text-decoration: none;
+    padding: 6px 16px;
+    border-radius: 4px;
+    font-weight: bold;
+    font-size: 13px;
+    transition: background 0.2s ease;
+}
+
+.btn-dark-green:hover {
+    background-color: #003b38;
+}
+
+/* --- 2. Main Navigation Header Styling --- */
+.main-header {
+    background-color: #ffffff;
+    padding: 15px 6%;
+    width: 100%;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    
+    /* MODIFICATION: Changed from 'sticky' to 'relative' since the wrapper container 
+       (#header-container) now holds global fixation.
+    */
+    position: relative;
+}
+
+.navbar-container {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0; 
+    width: 90% !important;
+}
+
+.ppra-logo {
+    height: 80px; 
+    width: auto;
+}
+
+/* Target the main-nav container to position it toward the center */
+.main-nav {
+    margin-left: auto; 
+    margin-right: 20px; 
+}
+
+.main-nav .nav-links {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #000; 
+    font-size: 16px;
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+.nav-links a:hover, 
+/* Navigation link item states highlighting active dynamic routes */
+.nav-links a.active {
+    color: #00524e !important; /* Theme green color */
+    font-weight: 600; /* Add visual weight */
+}
+
+/* Position the parent list item relatively so the dropdown aligns perfectly underneath it */
+.dropdown-item {
+    position: relative;
+}
+
+/* Hide the dropdown menu by default and style its appearance */
+.dropdown-menu {
+    display: none; 
+    position: absolute;
+    top: 100%; 
+    left: 0;
+    background-color: #ffffff;
+    list-style: none;
+    min-width: 250px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15); 
+    padding: 10px 0;
+    z-index: 2100; 
+    border-radius: 0 0 4px 4px;
+}
+
+/* Style the links inside the dropdown */
+.dropdown-menu li a {
+    color: #333333;
+    padding: 12px 20px;
+    display: block;
+    font-size: 14px;
+    font-weight: normal;
+    text-decoration: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.06); 
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+/* Remove the border from the very last item */
+.dropdown-menu li:last-child a {
+    border-bottom: none;
+}
+
+/* Hover style inside the dropdown items */
+.dropdown-menu li a:hover {
+    background-color: rgba(0, 82, 78, 0.08); 
+    color: #00524e;
+}
+
+/* --- THE HOVER TRIGGER --- */
+.dropdown-item:hover .dropdown-menu {
+    display: block;
+}
+
+/* Position the parent list item relatively so the sub-menu anchors to its right side */
+.sub-dropdown-item {
+    position: relative;
+}
+
+.sub-dropdown-item a {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.arrow {
+    font-size: 10px;
+    opacity: 0.5;
+}
+
+/* Hide the sub-dropdown menu by default and break it out to the right side */
+.sub-dropdown-menu {
+    display: none; 
+    position: absolute;
+    top: 0; 
+    left: 100%; 
+    background-color: #ffffff; 
+    list-style: none;
+    min-width: 240px;
+    box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.15);
+    padding: 10px 0;
+    z-index: 2200; 
+    border-radius: 0 4px 4px 4px;
+}
+
+/* --- THE SUB-HOVER TRIGGER --- */
+.sub-dropdown-item:hover .sub-dropdown-menu {
+    display: block;
+}
+
+/* --- 3. MEGA MENU STYLING (Resource Center Extension) --- */
+.position-static {
+    position: static !important;
+}
+
+/* Forces the mega dropdown to spawn perfectly at the bottom edge of the white nav bar container */
+.main-header .mega-dropdown-menu {
+    position: absolute;
+    top: 100%; 
+    width: 100%; 
+    max-width: 1400px;
+    left: 0 !important; 
+    background-color: #ffffff; 
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+    gap: 30px;
+    padding: 30px 40px !important;
+    z-index: 2500; 
+}
+
+/* Activates clean horizontal columns upon hover sequence triggers */
+.dropdown-item:hover .mega-dropdown-menu {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); 
+}
+
+/* Grid Column Content Presentation Attributes */
+.mega-column h3 {
+    font-size: 16px;
+    font-weight: bold;
+    color: #000000;
+    margin-bottom: 15px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.mega-column ul {
+    list-style: none;
+}
+
+/* Clean textual normalization for item listings inside the panel grid components */
+.mega-column ul li a {
+    color: #555555 !important;
+    font-size: 16px !important;
+    font-weight: normal !important;
+    padding: 6px 0 !important;
+    border-bottom: none !important; 
+    display: block;
+}
+
+.mega-column ul li a:hover {
+    color: #00524e !important;
+    background-color: transparent !important; 
+    text-decoration: underline;
+}

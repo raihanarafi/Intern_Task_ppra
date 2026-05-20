@@ -1,0 +1,117 @@
+
+
+/* --- Welcome & Prime Minister Profile Section Styles --- */
+.welcome-profile-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 88% !important; 
+    max-width: 1440px;
+    margin: 0 auto 50px auto !important; 
+    padding: 0;
+    gap: 30px; 
+    position: relative;
+    background-color: #ffffff;
+}
+
+.welcome-text-content {
+    flex: 0 0 55%; 
+    max-width: 55%;
+    padding-top: 40px; 
+    margin-left: 4%; 
+    padding-right: 20px; 
+}
+
+.welcome-text-content h2 {
+    font-size: 32px;
+    color: #222222;
+    font-weight: 700;
+    margin-bottom: 20px;
+    line-height: 1.3;
+}
+
+.welcome-text-content p {
+    font-size: 16px;
+    color: #555555;
+    line-height: 1.7;
+    text-align: justify;
+}
+
+.profile-card-container {
+    flex: 0 0 32%; 
+    max-width: 35%;
+    display: flex;
+    justify-content: flex-start; 
+    padding-left: 10px; 
+    position: relative;
+    z-index: 1000; 
+}
+
+.profile-card {
+    background-color: #ffffff;
+    width: 100%;
+    max-width: 320px;
+    border-radius: 4px;
+    margin-top: -120px; 
+    border: 4px solid #ffffff; 
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15); 
+    overflow: hidden;
+}
+
+.profile-card .image-wrapper {
+    width: 100%;
+    height: 350px; 
+    overflow: hidden;
+    background-color: #f4f4f4;
+}
+
+.profile-card .image-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+}
+
+.profile-card .profile-info-footer {
+    padding: 15px 20px;
+    background-color: #ffffff;
+}
+
+.profile-card .profile-info-footer h3 {
+    font-size: 16px;
+    color: #111111;
+    font-weight: 700;
+    margin-bottom: 4px;
+}
+
+.profile-card .profile-info-footer .profile-designation {
+    font-size: 14px;
+    color: #666666;
+    display: block;
+    line-height: 1.4;
+}
+
+@media (max-width: 992px) {
+    .welcome-profile-section {
+        flex-direction: column-reverse; 
+        align-items: center;
+        gap: 30px;
+    }
+    
+    .welcome-text-content,
+    .profile-card-container {
+        max-width: 100%;
+        flex: 1;
+        padding-right: 0;
+        padding-left: 0;
+        margin-left: 0; 
+    }
+    
+    .profile-card {
+        margin-top: 20px; 
+    }
+    
+    .profile-card-container {
+        justify-content: center;
+    }
+}

@@ -1,0 +1,80 @@
+/* --- Info Grid Link Cards Section Styling --- */
+.info-links-grid-container {
+    width: 100%;
+    background-color: transparent; 
+    padding: 0;
+    margin-top: 35px;
+    margin-bottom: 50px;
+}
+
+.info-links-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); 
+    background-color: #f8f9fa; 
+    padding: 30px 40px; 
+    border-radius: 4px;
+    width: 90% !important; 
+    margin: 0 auto !important; 
+    gap: 20px;
+}
+
+.info-grid-card {
+    display: flex;
+    align-items: center; 
+    text-decoration: none !important; 
+    color: inherit;
+    padding: 10px;
+    transition: transform 0.2s ease;
+}
+
+.info-grid-card:hover {
+    transform: translateY(-2px); 
+}
+
+.info-grid-card .card-icon-wrapper {
+    flex: 0 0 45px;
+    height: 45px;
+    margin-right: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #222222; 
+}
+
+.info-grid-card .card-icon-wrapper stroke {
+    stroke-width: 1.6px;
+}
+
+.info-grid-card .card-icon-wrapper svg {
+    width: 38px;
+    height: 38px;
+}
+
+.info-grid-card .card-text-content h3 {
+    font-size: 16px; 
+    font-weight: 600;
+    color: #111111;
+    margin-bottom: 4px;
+    line-height: 1.2;
+}
+
+.info-grid-card .card-text-content p {
+    font-size: 16px;
+    color: #777777; 
+    line-height: 1.4;
+}
+
+@media (max-width: 992px) {
+    .info-links-grid {
+        grid-template-columns: repeat(2, 1fr); 
+        padding: 25px;
+        gap: 25px 15px;
+    }
+}
+
+@media (max-width: 576px) {
+    .info-links-grid {
+        grid-template-columns: 1fr; 
+        gap: 20px;
+    }
+}

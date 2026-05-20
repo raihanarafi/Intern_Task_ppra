@@ -1,0 +1,120 @@
+/* --- 7. PROCUREMENT OPPORTUNITIES & NOTICES STYLING --- */
+.procurement-notices-container {
+    width: 90% !important;
+    margin: 50px auto 60px auto !important;
+    padding: 0 4%; 
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+.procurement-header-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 40px;
+    margin-bottom: 35px;
+}
+
+.procurement-title-block {
+    flex: 0 0 45%;
+    max-width: 45%;
+}
+
+.procurement-title-block h2 {
+    font-size: 34px; 
+    font-weight: 700;
+    color: #222222;
+    line-height: 1.25;
+    letter-spacing: -0.5px;
+}
+
+.procurement-desc-block {
+    flex: 0 0 50%;
+    max-width: 50%;
+    padding-top: 6px;
+}
+
+.procurement-desc-block p {
+    font-size: 14.5px;
+    color: #666667;
+    line-height: 1.6;
+}
+
+.procurement-cards-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px 28px;
+}
+
+.notice-data-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 24px 30px;
+    text-decoration: none !important;
+    color: inherit;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03), 0 2px 6px rgba(0, 0, 0, 0.02);
+    border: 1px solid rgba(0, 0, 0, 0.015);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.notice-data-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.06);
+}
+
+.notice-card-info h3 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #111111;
+    margin-bottom: 6px;
+}
+
+.notice-card-info p {
+    font-size: 14px;
+    color: #888888;
+}
+
+.notice-badge-count {
+    background-color: #004d49; 
+    color: #ffffff;
+    font-size: 13px;
+    font-weight: 700;
+    min-width: 50px;
+    height: 30px;
+    padding: 0 12px;
+    border-radius: 15px; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    letter-spacing: 0.2px;
+}
+
+@media (max-width: 992px) {
+    .procurement-notices-container {
+        padding: 0 2%; 
+    }
+    
+    .procurement-header-row {
+        flex-direction: column;
+        gap: 15px;
+        margin-bottom: 25px;
+    }
+    
+    .procurement-title-block,
+    .procurement-desc-block {
+        max-width: 100%;
+        flex: 1;
+    }
+    
+    .procurement-title-block h2 {
+        font-size: 28px;
+    }
+    
+    .procurement-cards-grid {
+        grid-template-columns: 1fr; 
+        gap: 18px;
+    }
+}

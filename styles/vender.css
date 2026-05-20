@@ -1,0 +1,156 @@
+/* --- REGIONAL REGISTRATION MAIN CONTEXT --- */
+.vendor-registration-section {
+    width: 100%;
+    background-color: #ffffff;
+    box-sizing: border-box;
+    /* Added clean spacing layout to balance it inside your document */
+    padding: 60px 0;
+    padding-bottom: 0 !important;
+    margin-bottom: 0 !important;
+}
+
+.vendor-main-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+}
+
+/* --- A. TOP ROW BANNER SUBSYSTEM --- */
+.vendor-action-banner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding-bottom: 45px;
+    box-sizing: border-box;
+}
+
+.btn-register-vendor {
+    display: inline-block;
+    background-color: #000000;
+    color: #ffffff;
+    text-decoration: none;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 0.3px;
+    padding: 12px 24px;
+    border-radius: 50px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+    transition: background-color 0.2s ease, transform 0.2s ease;
+    white-space: nowrap;
+}
+
+.btn-register-vendor:hover {
+    background-color: #1a1a1a;
+    transform: translateY(-1px);
+}
+
+.banner-announcement-text {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    color: #212529;
+    margin: 0;
+    line-height: 1.4;
+}
+
+/* --- B. BOTTOM PROVINCIAL GRID SUBSYSTEM --- */
+.provinces-grid-wrapper {
+    display: grid;
+    /* Clean 6-column layout with fine border splits matching your graphic */
+    grid-template-columns: repeat(6, 1fr);
+    border-top: 1px solid #e9ecef;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.province-grid-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 40px 10px;
+    text-decoration: none;
+    box-sizing: border-box;
+    background-color: #ffffff;
+    transition: background-color 0.2s ease;
+}
+
+/* Sequential right border dividers matching your pixel mockup layout */
+.province-grid-item:not(:last-child) {
+    border-right: 1px solid #e9ecef;
+}
+
+.province-grid-item:hover {
+    background-color: #f8f9fa;
+}
+
+.province-monument-icon {
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.province-monument-icon img {
+    height: 100%;
+    width: auto;
+    object-fit: contain;
+    /* Keeps black vector lines crisp */
+    display: block; 
+}
+
+.province-label-name {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    color: #212529;
+    letter-spacing: 0.2px;
+    text-align: center;
+}
+
+/* --- C. RESPONSIVE LAYER OVERRIDES --- */
+@media (max-width: 992px) {
+    .vendor-action-banner {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+        padding-bottom: 35px;
+    }
+    
+    .provinces-grid-wrapper {
+        grid-template-columns: repeat(3, 1fr);
+        border: 1px solid #e9ecef;
+    }
+    
+    .province-grid-item {
+        border-bottom: 1px solid #e9ecef;
+    }
+    
+    .province-grid-item:nth-child(3n) {
+        border-right: none;
+    }
+}
+
+@media (max-width: 576px) {
+    .provinces-grid-wrapper {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .province-grid-item:nth-child(3n) {
+        border-right: 1px solid #e9ecef;
+    }
+    
+    .province-grid-item:nth-child(2n) {
+        border-right: none;
+    }
+    
+    .banner-announcement-text {
+        font-size: 12px;
+    }
+}

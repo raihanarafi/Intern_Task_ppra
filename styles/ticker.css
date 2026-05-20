@@ -1,0 +1,72 @@
+/* --- 6. NEWS TICKER STYLING --- */
+.ticker-container {
+    display: flex;
+    background-color: #0a312f; 
+    color: #ffffff;
+    height: 50px;
+    width: 90% !important; 
+    margin: 0 auto 30px auto !important; 
+    align-items: center;
+    overflow: hidden;
+    font-size: 14px;
+    font-weight: 500;
+    position: relative;
+    z-index: 100;
+}
+
+.ticker-label {
+    background-color: #00524e; 
+    padding: 0 25px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+    z-index: 5;
+    box-shadow: 5px 0 15px rgba(0,0,0,0.2);
+}
+
+.ticker-wrap {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.ticker-content {
+    display: inline-flex;
+    white-space: nowrap;
+    gap: 60px;
+    padding-left: 100%;
+    animation: scrollTicker 60s linear infinite; 
+}
+
+.ticker-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+}
+
+.ticker-item:hover {
+    color: #a3e2df;
+}
+
+.bullet-dot {
+    width: 6px;
+    height: 6px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+@keyframes scrollTicker {
+    0% {
+        transform: translate3d(0, 0, 0);
+    }
+    100% {
+        transform: translate3d(-100%, 0, 0);
+    }
+}
+
+.ticker-wrap:hover .ticker-content {
+    animation-play-state: paused;
+}
