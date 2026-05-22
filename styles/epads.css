@@ -1,4 +1,4 @@
-/* --- 8. EPADS PERFORMANCE METRICS STYLING --- */
+/* EPADS PERFORMANCE METRICS STYLING */
 .epads-metrics-container {
     width: 90% !important;
     margin: 50px auto 60px auto !important;
@@ -108,7 +108,7 @@
     }
 }
 
-/* --- 9. EPADS COUNTERS DATA GRID STYLING --- */
+/*EPADS COUNTERS DATA GRID STYLING */
 .epads-counters-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr); 

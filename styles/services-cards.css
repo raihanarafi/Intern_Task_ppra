@@ -1,16 +1,15 @@
-/* --- SERVICES SECTION OUTER WRAPPER --- */
+/* SERVICES SECTION OUTER WRAPPER  */
 .services-cards-section {
     width: 100%;
-    /* Creates the gap at the top (40px) and bottom (60px) of the card block */
     padding: 40px 0 60px 0; 
     box-sizing: border-box;
 }
 
-/* --- SERVICES CARDS GRID STRUCTURE --- */
+/* SERVICES CARDS GRID STRUCTURE  */
 .services-grid-wrapper {
     width: 80%;
     max-width: 1200px;
-    margin: 0 auto; /* Centers the grid, maintaining equal gaps on both sides */
+    margin: 0 auto; 
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 30px;
@@ -18,7 +17,7 @@
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 }
 
-/* --- INDIVIDUAL CARD ITEMS --- */
+/* INDIVIDUAL CARD ITEMS */
 .service-card-item {
     background-color: #ffffff;
     border-radius: 6px;
@@ -38,7 +37,7 @@
     box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
 }
 
-/* --- ICONS & TYPOGRAPHY --- */
+/* ICONS & TYPOGRAPHY  */
 .service-icon-box {
     color: #00524e;
     font-size: 32px;
@@ -72,7 +71,7 @@
     margin: 0;
 }
 
-/* --- RESPONSIVE MEDIA BREAKPOINTS --- */
+/*  RESPONSIVE MEDIA BREAKPOINTS  */
 @media (max-width: 992px) {
     .services-grid-wrapper {
         grid-template-columns: repeat(2, 1fr);
@@ -80,7 +79,7 @@
         width: 88%;
     }
     .services-cards-section {
-        padding: 20px 0 40px 0; /* Slightly tighter top/bottom gaps for tablets */
+        padding: 20px 0 40px 0; 
     }
 }
 

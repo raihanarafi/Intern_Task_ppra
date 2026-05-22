@@ -1,11 +1,7 @@
-/* =========================================================================
-   ABOUT US PAGE LAYOUT & TYPOGRAPHY STYLES
-   ========================================================================= */
-
 /* 1. Hero Banner Setup */
 .about-hero-section {
     width: 100%;
-    margin-top: 80px; /* Leaves space for the sticky header */
+    margin-top: 80px; 
     padding: 0 20px;
     box-sizing: border-box;
 }
@@ -20,17 +16,17 @@
     width: 100%;
     height: auto;
     display: block;
-    border-radius: 12px; /* Smooth rounded corners matching screenshot */
+    border-radius: 12px; 
     box-shadow: 0 4px 20px rgba(0,0,0,0.08);
 }
 
-/* 2. Who We Are Split Layout Container */
+/* 2. Split Layout Container */
 .about-split-container {
     display: flex;
     max-width: 1200px;
     margin: 60px auto;
     padding: 0 20px;
-    gap: 50px; /* Creates clean spacing between left image and right text */
+    gap: 50px; 
     align-items: flex-start;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
 }
@@ -38,14 +34,12 @@
 /* Left Side: Layout Column (Image & Milestone) */
 .details-left {
     flex: 1;
-    /* Uses Grid instead of absolute positioning to perfectly place the badge */
     display: grid !important;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr;
     position: relative;
 }
 
-/* Both items occupy the exact same grid quadrant, meaning they naturally layer without absolute issues */
 .image-wrapper {
     grid-column: 1 / -1;
     grid-row: 1 / -1;
@@ -64,11 +58,11 @@
 .details-left .milestone-badge {
     grid-column: 1 / -1;
     grid-row: 1 / -1;
-    justify-self: start; /* Locks horizontally to the left edge */
-    align-self: end;    /* Locks vertically to the bottom edge */
+    justify-self: start; 
+    align-self: end;    
     
-    background-color: #ffffff !important; /* Solid white background card */
-    padding: 30px 40px 35px 40px !important; /* Generates breathing space frame */
+    background-color: #ffffff !important; 
+    padding: 30px 40px 35px 40px !important; 
     display: flex !important;
     flex-direction: column !important;
     align-items: center !important;
@@ -79,9 +73,9 @@
 }
 
 .milestone-number {
-    font-size: 72px; /* Matches layout scale weight precisely */
+    font-size: 72px;
     font-weight: 800;
-    color: #1e293b; /* Dark charcoal tone */
+    color: #1e293b; 
     line-height: 0.9;
     letter-spacing: -1px;
     margin: 0;
@@ -89,7 +83,7 @@
 }
 
 .milestone-text {
-    font-size: 11px; /* Clean tracking label rule details */
+    font-size: 11px; 
     font-weight: 700;
     letter-spacing: 0.5px;
     line-height: 1.4;
@@ -105,15 +99,14 @@
     flex: 1.2;
     display: flex;
     flex-direction: column;
-    gap: 25px; /* Perfect spacing between blocks from screenshot */
+    gap: 25px; 
 }
 
-/* Typography Overrides to Match image_cbe026.png Precisely */
 .details-right h2,
 .board-container h2 {
     font-size: 28px;
     font-weight: 600;
-    color: #0b2545; /* Dark corporate slate blue/black from your screenshot */
+    color: #0b2545; 
     margin: 0 0 16px 0;
     letter-spacing: -0.5px;
 }
@@ -121,15 +114,15 @@
 .details-right p,
 .board-container p {
     font-size: 14px;
-    line-height: 1.65; /* Matches the clean reading space */
-    color: #64748b; /* Soft slate-grey body color */
+    line-height: 1.65; 
+    color: #64748b; 
     margin: 0;
-    text-align: left; /* Left alignment matching screenshot text blocks */
+    text-align: left; 
 }
 
-/* --- CORE FUNCTIONS SPECIFIC LIST STYLING --- */
+/* CORE FUNCTIONS SPECIFIC LIST STYLING */
 .core-functions-list ul {
-    list-style: none; /* Strip standard bullet rendering */
+    list-style: none; 
     padding: 0;
     margin: 0;
 }
@@ -137,9 +130,9 @@
 .core-functions-list ul li {
     font-size: 15px;
     line-height: 1.65;
-    color: #64748b; /* Clean matching grey text color */
+    color: #64748b; 
     position: relative;
-    padding-left: 18px; /* Precise indentation gap */
+    padding-left: 18px; 
     margin-bottom: 14px;
 }
 
@@ -149,19 +142,19 @@
     position: absolute;
     left: 0;
     top: 0;
-    color: #64748b; /* Color matches font selection perfectly */
+    color: #64748b; 
     font-size: 12px;
 }
 
 /* 3. Board of Directors Panel */
 .board-directors-section {
-    margin-top: 5px; /* Fits elegantly right underneath the core functions list block */
+    margin-top: 5px; 
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
 }
 
 /* Sky-Blue Anchor Variant Link Map */
 .board-members-link {
-    color: #0284c7; /* Sky blue hyperlink tint from image */
+    color: #0284c7; 
     text-decoration: underline;
     font-weight: 500;
     transition: color 0.2s ease;
@@ -173,27 +166,24 @@
 
 /* BRAND GREEN NAV HIGHLIGHT APPLIER RULE */
 .main-nav .nav-links a.active {
-    color: #1e7e34 !important; /* Theme green color */
+    color: #1e7e34 !important; 
     font-weight: 600;
 }
 
-/* =========================================================================
-   PROVINCES PORTAL FLEX GRID STRIP LAYOUT (SCREENSHOT PERFECT MATCH)
-   ========================================================================= */
+
 
 .provinces-portal-section {
-    width: 90% !important; /* Creates equal gaps on both sides */
-    max-width: 1200px; /* Aligns with your main page text block limits */
-    border-top: 1px solid #e2e8f0; /* Crisp top boundary line from screenshot */
+    width: 90% !important; 
+    max-width: 1200px; 
+    border-top: 1px solid #e2e8f0; 
     background-color: #ffffff;
     padding: 0;
-    margin: 50px auto 20px auto; /* "auto" centers the entire grid perfectly */
+    margin: 50px auto 20px auto; 
     box-sizing: border-box;
 }
 
 .provinces-grid-wrapper {
     display: grid;
-    /* Creates 6 completely identical columns for your 6 provinces */
     grid-template-columns: repeat(6, 1fr); 
     width: 100%;
     box-sizing: border-box;
@@ -203,21 +193,19 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: flex-end; /* Pin details precisely to the base label line */
+    justify-content: flex-end; 
     text-decoration: none;
-    padding: 35px 10px 25px 10px; /* Exact top/bottom spacing from screenshot */
+    padding: 35px 10px 25px 10px; 
     gap: 15px;
-    border-right: 1px solid #e2e8f0; /* Internal thin vertical grid borders */
+    border-right: 1px solid #e2e8f0; 
     min-height: 125px;
     box-sizing: border-box;
 }
 
-/* Adds the outer-left bounding divider line to the first item */
 .provinces-grid-wrapper .province-grid-item:first-child {
     border-left: 1px solid #e2e8f0; 
 }
 
-/* Image container settings matching original aspect ratio scales */
 .province-monument-icon {
     height: 45px;
     display: flex;
@@ -236,7 +224,7 @@
 .province-label-name {
     font-size: 11px;
     font-weight: 700;
-    color: #0b2545; /* Dark corporate navy brand tone */
+    color: #0b2545; 
     letter-spacing: 0.5px;
     text-align: center;
 }
@@ -254,11 +242,11 @@
     }
 
     .provinces-portal-section {
-        width: 95% !important; /* Slightly more room on tablets */
+        width: 95% !important; 
     }
 
     .provinces-grid-wrapper {
-        grid-template-columns: repeat(3, 1fr); /* 3x2 on tablets */
+        grid-template-columns: repeat(3, 1fr);
     }
 
     .province-grid-item {
@@ -291,6 +279,6 @@
 
 @media (max-width: 480px) {
     .provinces-grid-wrapper {
-        grid-template-columns: repeat(2, 1fr); /* 2x3 on phones */
+        grid-template-columns: repeat(2, 1fr); 
     }
 }

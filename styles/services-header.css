@@ -1,4 +1,4 @@
-/* --- SECTION CONTAINER WITH SIDE GAPS --- */
+/* SECTION CONTAINER WITH SIDE GAPS  */
 .info-section-header {
     width: 100%;
     margin: 60px 0 40px 0;
@@ -8,9 +8,9 @@
 
 /* The .container creates the uniform gap on both sides */
 .info-section-header .container {
-    width: 80%;            /* Keeps a 5% gap on the left and 5% gap on the right */
-    max-width: 1200px;     /* Prevents the content from stretching too wide on massive monitors */
-    margin: 0 auto;        /* Centers the container perfectly */
+    width: 80%;           
+    max-width: 1200px;    
+    margin: 0 auto;       
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
@@ -35,7 +35,7 @@
 .header-desc-column {
     flex: 0 0 50%;
     max-width: 50%;
-    padding-top: 8px; /* Perfectly aligns paragraph text line with the top of the large heading */
+    padding-top: 8px; 
 }
 
 .header-desc-column p {
@@ -50,7 +50,7 @@
     .info-section-header .container {
         flex-direction: column;
         gap: 15px;
-        width: 88%; /* Slightly larger side gaps on mobile devices for clean readability */
+        width: 88%; 
     }
     .header-title-column, 
     .header-desc-column {

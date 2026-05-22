@@ -1,9 +1,8 @@
-/* --- REGIONAL REGISTRATION MAIN CONTEXT --- */
+/* REGIONAL REGISTRATION MAIN CONTEXT  */
 .vendor-registration-section {
     width: 100%;
     background-color: #ffffff;
     box-sizing: border-box;
-    /* Added clean spacing layout to balance it inside your document */
     padding: 60px 0;
     padding-bottom: 0 !important;
     margin-bottom: 0 !important;
@@ -18,7 +17,7 @@
     box-sizing: border-box;
 }
 
-/* --- A. TOP ROW BANNER SUBSYSTEM --- */
+/* A. TOP ROW BANNER SUBSYSTEM  */
 .vendor-action-banner {
     display: flex;
     align-items: center;
@@ -58,10 +57,9 @@
     line-height: 1.4;
 }
 
-/* --- B. BOTTOM PROVINCIAL GRID SUBSYSTEM --- */
+/*  B. BOTTOM PROVINCIAL GRID SUBSYSTEM */
 .provinces-grid-wrapper {
     display: grid;
-    /* Clean 6-column layout with fine border splits matching your graphic */
     grid-template-columns: repeat(6, 1fr);
     border-top: 1px solid #e9ecef;
     box-sizing: border-box;
@@ -80,7 +78,6 @@
     transition: background-color 0.2s ease;
 }
 
-/* Sequential right border dividers matching your pixel mockup layout */
 .province-grid-item:not(:last-child) {
     border-right: 1px solid #e9ecef;
 }
@@ -101,7 +98,6 @@
     height: 100%;
     width: auto;
     object-fit: contain;
-    /* Keeps black vector lines crisp */
     display: block; 
 }
 
@@ -114,7 +110,7 @@
     text-align: center;
 }
 
-/* --- C. RESPONSIVE LAYER OVERRIDES --- */
+/* C. RESPONSIVE LAYER OVERRIDES  */
 @media (max-width: 992px) {
     .vendor-action-banner {
         flex-direction: column;

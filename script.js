@@ -1,5 +1,3 @@
-// Reusable function to fetch external HTML files and inject them into containers
-// Returns the promise chain so we can chain actions sequentially using .then()
 function includeComponent(containerId, filePath) {
     return fetch(filePath)
         .then(response => {
@@ -62,7 +60,7 @@ function initializeCarousel() {
 
     // Auto Rotation Loop Settings
     function startTimer() {
-        slideInterval = setInterval(nextSlide, 5000); // 5-second rotation cycle
+        slideInterval = setInterval(nextSlide, 5000); 
     }
 
     function resetTimer() {
@@ -74,7 +72,7 @@ function initializeCarousel() {
     startTimer();
 }
 
-// --- OPTIMIZED SMOOTH SCROLL OBSERVER FUNCTION ---
+// OPTIMIZED SMOOTH SCROLL OBSERVER FUNCTION 
 function setupScrollVisibilityObservers() {
     const sidebar = document.querySelector('.social-sidebar');
     const header = document.getElementById('header-container');
@@ -88,7 +86,7 @@ function setupScrollVisibilityObservers() {
     window.addEventListener('scroll', function() {
         const currentScroll = window.scrollY || window.pageYOffset;
 
-        // --- SMART SIDEBAR DIRECTION LOGIC ---
+        // SMART SIDEBAR DIRECTION LOGIC 
         if (sidebar) {
             if (currentScroll <= 50) {
                 sidebar.classList.remove('sidebar-hidden');
@@ -99,7 +97,7 @@ function setupScrollVisibilityObservers() {
             }
         }
 
-        // --- INSTANT HEADER EXCEPTION COLLAPSE MATRIX ---
+        // INSTANT HEADER EXCEPTION COLLAPSE MATRIX 
         if (header) {
             const procRect = procurementHeaderSection ? procurementHeaderSection.getBoundingClientRect() : null;
             const vendRect = vendorSection ? vendorSection.getBoundingClientRect() : null;
@@ -120,7 +118,7 @@ function setupScrollVisibilityObservers() {
     }, { passive: true });
 }
 
-// --- NAVIGATION ROUTING HUB ---
+// NAVIGATION ROUTING HUB 
 function initializeNavigationRoutes() {
     const homeLink = document.getElementById("nav-home");
     const aboutLink = document.getElementById("nav-about-us");
@@ -133,7 +131,7 @@ function initializeNavigationRoutes() {
         clickedLink.classList.add("active");
     }
 
-    // --- CASE A: CLICKING THE HOME NAV LINK ---
+    // CASE A: CLICKING THE HOME NAV LINK 
     if (homeLink) {
         homeLink.addEventListener("click", function(event) {
             event.preventDefault();
@@ -149,7 +147,7 @@ function initializeNavigationRoutes() {
         });
     }
 
-    // --- CASE B: CLICKING THE ABOUT US NAV LINK ---
+    // CASE B: CLICKING THE ABOUT US NAV LINK 
     if (aboutLink) {
         aboutLink.addEventListener("click", function(event) {
             event.preventDefault();
@@ -173,7 +171,7 @@ function initializeNavigationRoutes() {
     }
 }
 
-// --- SEQUENTIAL EXECUTION HUB ---
+// SEQUENTIAL EXECUTION HUB 
 window.addEventListener('DOMContentLoaded', () => {
     // 1. Fetch and load the persistent Header layout component
     includeComponent('header-container', './header.html')

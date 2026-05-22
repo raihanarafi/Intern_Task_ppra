@@ -1,23 +1,21 @@
-/* --- PORTAL MAIN FOOTER SYSTEM --- */
+/* PORTAL MAIN FOOTER SYSTEM */
 .portal-main-footer {
     width: 100%;
-    background-color: #2c3136; /* Smooth slate charcoal dark canvas background */
+    background-color: #2c3136; 
     box-sizing: border-box;
-    padding: 70px 0 0 0; /* Left/Right side spacing managed internally by fluid columns */
+    padding: 70px 0 0 0; 
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     margin-top: 0 !important;
     position: relative;
-    /* Ensure no collapsing layout margins from child elements leak out */
     display: flow-root;
 }
 
-/* --- 1. UPPER FOOTER CONTENT WRAPPER --- */
+/*  1. UPPER FOOTER CONTENT WRAPPER  */
 .footer-links-container {
     width: 80%;
     max-width: 1240px;
     margin: 0 auto;
     display: grid;
-    /* Clean 4-column balanced text distribution grid */
     grid-template-columns: repeat(4, 1fr);
     gap: 20px 20px;
     padding-bottom: 60px;
@@ -45,12 +43,12 @@
 /* Static Informational Addresses Styling */
 .footer-column .address-text {
     font-size: 14.5px;
-    color: #a0a5a9; /* Soft muted gray for better contrast readability */
+    color: #a0a5a9; 
     line-height: 1.6;
     margin: 0 0 20px 0;
 }
 
-/* --- 2. LIST INTERFACE IMPLEMENTATIONS --- */
+/* 2. LIST INTERFACE IMPLEMENTATIONS */
 .contact-details-list,
 .navigation-links-list {
     list-style: none;
@@ -71,7 +69,7 @@
 .contact-details-list li i {
     color: #ffffff;
     font-size: 14px;
-    padding-top: 4px; /* Vertically aligns static icons with line-wrapped text blocks */
+    padding-top: 4px; 
     width: 16px;
     text-align: center;
 }
@@ -85,14 +83,14 @@
 }
 
 .contact-details-list li a:hover {
-    color: #009688; /* Soft responsive hover teal feedback color */
+    color: #009688; 
 }
 
 /* Muted contextual instructions text under contact values */
 .contact-details-list .context-label {
     display: block;
     font-size: 12px;
-    color: #e57373; /* Smooth highlight color matching the reference image state */
+    color: #e57373; 
     margin-top: 2px;
     font-weight: 400;
 }
@@ -112,13 +110,13 @@
 }
 
 .navigation-links-list li a:hover {
-    color: #ffffff; /* Bright white highlight on link item hover states */
+    color: #ffffff; 
 }
 
-/* --- 3. BASEBAND STRIP HIGHLIGHT (TEAL RUNTIME) --- */
+/* 3. BASEBAND STRIP HIGHLIGHT (TEAL RUNTIME)  */
 .footer-copyright-bar {
     width: 100%;
-    background-color: #00524e; /* Deep green theme brand match */
+    background-color: #00524e; 
     padding: 20px 0;
     box-sizing: border-box;
 }
@@ -137,10 +135,10 @@
     letter-spacing: 0.2px;
 }
 
-/* --- 4. RESPONSIVE MEDIA HOOKS --- */
+/* 4. RESPONSIVE MEDIA HOOKS  */
 @media (max-width: 992px) {
     .footer-links-container {
-        grid-template-columns: repeat(2, 1fr); /* Forms balanced pairs grid on medium viewports */
+        grid-template-columns: repeat(2, 1fr); 
         gap: 40px;
     }
     .portal-main-footer {
@@ -150,8 +148,7 @@
 
 @media (max-width: 576px) {
     .footer-links-container {
-        grid-template-columns: 1fr; /* Fallback linear collapse stack for vertical phone layers */
-        gap: 35px;
+        grid-template-columns: 1fr; 
         padding-bottom: 40px;
     }
 }

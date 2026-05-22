@@ -1,6 +1,6 @@
 /* Header Style */
 
-/* --- Global Resets & Fonts --- */
+/* Global Resets & Fonts  */
 * {
     margin: 0;
     padding: 0;
@@ -16,33 +16,28 @@ html, body {
     background-color: #ffffff;
 }
 
-/* FIX: Push the content layout down safely.
-   This prevents your page sections from getting swallowed beneath the newly fixed header element.
-*/
 body {
     padding-top: 145px; 
 }
 
-/* --- New Parent Structural Anchor Layer --- */
 #header-container {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    z-index: 3000; /* Raised higher than the mega-menus to maintain complete layout dominance */
+    z-index: 3000; 
     transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s ease;
     transform: translateY(0);
     opacity: 1;
 }
 
-/* --- THE HOOK TARGETED BY YOUR INTERSECTION OBSERVER SCRIPT --- */
 #header-container.header-hidden {
     opacity: 0;
     pointer-events: none;
-    transform: translateY(-100%); /* Slides the top utility bar and nav links out of view together */
+    transform: translateY(-100%); 
 }
 
-/* --- 1. Top Utility Bar Styling --- */
+/* 1. Top Utility Bar Styling  */
 .top-bar {
     background-color: #f8f9fa;
     display: flex;
@@ -85,16 +80,12 @@ body {
     background-color: #003b38;
 }
 
-/* --- 2. Main Navigation Header Styling --- */
+/* 2. Main Navigation Header Styling */
 .main-header {
     background-color: #ffffff;
     padding: 15px 6%;
     width: 100%;
     box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-    
-    /* MODIFICATION: Changed from 'sticky' to 'relative' since the wrapper container 
-       (#header-container) now holds global fixation.
-    */
     position: relative;
 }
 
@@ -134,18 +125,14 @@ body {
 }
 
 .nav-links a:hover, 
-/* Navigation link item states highlighting active dynamic routes */
 .nav-links a.active {
-    color: #00524e !important; /* Theme green color */
-    font-weight: 600; /* Add visual weight */
+    color: #00524e !important; 
+    font-weight: 600; 
 }
 
-/* Position the parent list item relatively so the dropdown aligns perfectly underneath it */
 .dropdown-item {
     position: relative;
 }
-
-/* Hide the dropdown menu by default and style its appearance */
 .dropdown-menu {
     display: none; 
     position: absolute;
@@ -172,7 +159,6 @@ body {
     transition: background-color 0.2s ease, color 0.2s ease;
 }
 
-/* Remove the border from the very last item */
 .dropdown-menu li:last-child a {
     border-bottom: none;
 }
@@ -183,12 +169,11 @@ body {
     color: #00524e;
 }
 
-/* --- THE HOVER TRIGGER --- */
+/* THE HOVER TRIGGER */
 .dropdown-item:hover .dropdown-menu {
     display: block;
 }
 
-/* Position the parent list item relatively so the sub-menu anchors to its right side */
 .sub-dropdown-item {
     position: relative;
 }
@@ -204,7 +189,6 @@ body {
     opacity: 0.5;
 }
 
-/* Hide the sub-dropdown menu by default and break it out to the right side */
 .sub-dropdown-menu {
     display: none; 
     position: absolute;
@@ -219,17 +203,16 @@ body {
     border-radius: 0 4px 4px 4px;
 }
 
-/* --- THE SUB-HOVER TRIGGER --- */
+/* THE SUB-HOVER TRIGGER  */
 .sub-dropdown-item:hover .sub-dropdown-menu {
     display: block;
 }
 
-/* --- 3. MEGA MENU STYLING (Resource Center Extension) --- */
+/* 3. MEGA MENU STYLING (Resource Center Extension)  */
 .position-static {
     position: static !important;
 }
 
-/* Forces the mega dropdown to spawn perfectly at the bottom edge of the white nav bar container */
 .main-header .mega-dropdown-menu {
     position: absolute;
     top: 100%; 
@@ -243,13 +226,10 @@ body {
     z-index: 2500; 
 }
 
-/* Activates clean horizontal columns upon hover sequence triggers */
 .dropdown-item:hover .mega-dropdown-menu {
     display: grid;
     grid-template-columns: repeat(4, 1fr); 
 }
-
-/* Grid Column Content Presentation Attributes */
 .mega-column h3 {
     font-size: 16px;
     font-weight: bold;
@@ -263,7 +243,7 @@ body {
     list-style: none;
 }
 
-/* Clean textual normalization for item listings inside the panel grid components */
+
 .mega-column ul li a {
     color: #555555 !important;
     font-size: 16px !important;

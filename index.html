@@ -60,13 +60,12 @@
             const vendorSection = document.querySelector('.vendor-registration-section');
             const footerPlaceholder = document.getElementById('footer-placeholder');
 
-            // Track the last scroll position to calculate scroll direction
             let lastScrollTop = 0;
 
             window.addEventListener('scroll', function() {
                 const currentScroll = window.scrollY || window.pageYOffset;
 
-                // --- SMART SIDEBAR DIRECTION LOGIC ---
+                //  SMART SIDEBAR DIRECTION LOGIC 
                 if (sidebar) {
                     if (currentScroll <= 50) {
                         // Force show if user is completely at the top of the page
@@ -80,7 +79,7 @@
                     }
                 }
 
-                // --- HEADER VISIBILITY MAINTENANCE ---
+                // HEADER VISIBILITY MAINTENANCE 
                 if (header) {
                     const procRect = procurementHeaderSection ? procurementHeaderSection.getBoundingClientRect() : null;
                     const vendRect = vendorSection ? vendorSection.getBoundingClientRect() : null;
@@ -97,7 +96,7 @@
                     }
                 }
 
-                // Update the position value for the next scroll loop frame evaluation
+                
                 lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
             }, { passive: true });
         }
